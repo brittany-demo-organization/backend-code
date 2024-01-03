@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Metadata:
+    Generator: "former2"
+Description: "API Gateway for demo app"
+Resources:
+    ApiGatewayRestApi:
+        Type: "AWS::ApiGateway::RestApi"
+        Properties:
+            Name: "HelloWorldAPI"
+            ApiKeySourceType: "HEADER"
+            EndpointConfiguration: 
+                Types: 
+                  - "EDGE"
+

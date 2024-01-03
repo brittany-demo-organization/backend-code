@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Metadata:
+    Generator: "former2"
+Description: ""
+Resources:
+    DynamoDBTable:
+        Type: "AWS::DynamoDB::Table"
+        Properties:
+            AttributeDefinitions: 
+              - 
+                AttributeName: "id"
+                AttributeType: "S"
+            TableName: "HelloWorldDatabase"
+            KeySchema: 
+              - 
+                AttributeName: "id"
+                KeyType: "HASH"
+            ProvisionedThroughput: 
+                ReadCapacityUnits: 1
+                WriteCapacityUnits: 1
+

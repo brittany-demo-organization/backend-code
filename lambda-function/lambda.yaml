@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Metadata:
+    Generator: "former2"
+Description: ""
+Resources:
+    LambdaFunction:
+        Type: "AWS::Lambda::Function"
+        Properties:
+            Description: "A starter AWS Lambda function."
+            FunctionName: "HelloWorldFunction"
+            Handler: "lambda_function.lambda_handler"
+            Architectures: 
+              - "x86_64"
+            Code: 
+                S3Bucket: "prod-iad-c1-djusa-tasks"
+                S3Key: "/snapshots/851725416832/HelloWorldFunction-b9472052-dbd2-42c4-be05-843db8bcec37"
+                S3ObjectVersion: "cVG08YIWfdYEgJ7tv5CEkjkfhFsb13Jk"
+            MemorySize: 128
+            Role: "arn:aws:iam::851725416832:role/service-role/HelloWorldFunction-role-dv08ybk9"
+            Runtime: "python3.10"
+            Timeout: 3
+            TracingConfig: 
+                Mode: "PassThrough"
+            EphemeralStorage: 
+                Size: 512
+            Tags: 
+              - 
+                Key: "lambda-console:blueprint"
+                Value: "hello-world-python"
+
